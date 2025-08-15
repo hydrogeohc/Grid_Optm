@@ -57,7 +57,7 @@ export $(cat .env | xargs) && python run_aiq_native.py time
 ## ✨ Key Features
 
 - **🔋 Real-time Grid Optimization**: SciPy-based algorithms for power supply/demand balancing
-- **🌍 Multi-Region Support**: US-West, US-East, US-Central, and PG&E regions
+- **🌍 Multi-Region Support**: US-West, US-East, and US-Central regions
 - **🤖 AIQ Integration**: NVIDIA AIQ Toolkit for AI-powered grid operations
 - **🧠 LLM-Powered**: OpenAI GPT integration for intelligent analysis
 - **🚀 High Performance**: Sub-5ms optimization times with async operations
@@ -91,7 +91,7 @@ Grid_Optm/
 │   └── utils/                  # Utilities
 │       ├── config.py           # Configuration management
 │       └── logging.py          # Logging utilities
-├── run_aiq_native.py          # ⭐ Native AIQ runner (FIXED)
+├── run_aiq_native.py          # ⭐ Native AIQ runner 
 ├── tests/                     # Test suite
 │   ├── unit/                   # Unit tests
 │   ├── integration/            # Integration tests
@@ -152,7 +152,6 @@ Optimal Configuration: Supply: 1250.5 MW, Demand: 1248.7 MW
 | Western US | `us-west` | California, Oregon, Washington, Nevada |
 | Eastern US | `us-east` | New York, Florida, Massachusetts, etc. |
 | Central US | `us-central` | Texas, Illinois, Ohio, etc. |
-| PG&E | `pgae` | Pacific Gas & Electric service area |
 
 ## 🔧 Usage Methods
 
@@ -252,7 +251,7 @@ print('✅ Config creation: Success')
 
 **1. Script Timeout/EOF Errors**
 ```bash
-# FIXED: The script now handles both interactive and non-interactive modes
+# The script now handles both interactive and non-interactive modes
 # Use command-line mode for automated environments:
 export $(cat .env | xargs) && python run_aiq_native.py time
 ```
